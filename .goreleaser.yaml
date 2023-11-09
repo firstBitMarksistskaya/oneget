@@ -29,49 +29,49 @@ changelog:
       - '^skip:'
       - Merge pull request
       - Merge branch
-dockers:
-  - image_templates:
-      - 'v8platform/{{.ProjectName}}:{{ .Tag }}'
-      - 'v8platform/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}'
-      - 'v8platform/{{.ProjectName}}:latest'
-      - 'ghcr.io/v8platform/{{.ProjectName}}:{{ .Tag }}'
-      - 'ghcr.io/v8platform/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}'
-      - 'ghcr.io/v8platform/{{.ProjectName}}:latest'
-    dockerfile: Dockerfile
-    ids:
-      - oneget
-    build_flag_templates:
-      - "--label=org.label-schema.schema-version=1.0"
-      - "--label=org.label-schema.version={{.Version}}"
-      - "--label=org.label-schema.name={{.ProjectName}}"
-      - "--label=com.github.actions.name={{.ProjectName}}"
-      - "--label=com.github.actions.description=Console app for download packages from releases.1c.ru"
-      - "--label=com.github.actions.icon=terminal"
-      - "--label=com.github.actions.color=blue"
-      - "--label=repository=https://github.com/v8platform/oneget"
-      - "--label=homepage=https://github.com/v8platform/oneget"
-      - "--label=maintainer=Ruslan Zhdanov"
-  - image_templates:
-      - 'v8platform/{{.ProjectName}}-http:{{ .Tag }}'
-      - 'v8platform/{{.ProjectName}}-http:v{{ .Major }}.{{ .Minor }}'
-      - 'v8platform/{{.ProjectName}}-http:latest'
-      - 'ghcr.io/v8platform/{{.ProjectName}}-http:{{ .Tag }}'
-      - 'ghcr.io/v8platform/{{.ProjectName}}-http:v{{ .Major }}.{{ .Minor }}'
-      - 'ghcr.io/v8platform/{{.ProjectName}}-http:latest'
-    dockerfile: Dockerfile_s
-    ids:
-      - oneget
-    build_flag_templates:
-      - "--label=org.label-schema.schema-version=1.0"
-      - "--label=org.label-schema.version={{.Version}}"
-      - "--label=org.label-schema.name={{.ProjectName}}"
-      - "--label=com.github.actions.name={{.ProjectName}}"
-      - "--label=com.github.actions.description=Console app for download packages from releases.1c.ru"
-      - "--label=com.github.actions.icon=terminal"
-      - "--label=com.github.actions.color=blue"
-      - "--label=repository=https://github.com/v8platform/oneget"
-      - "--label=homepage=https://github.com/v8platform/oneget"
-      - "--label=maintainer=Ruslan Zhdanov"
+# dockers:
+#   - image_templates:
+#       - 'v8platform/{{.ProjectName}}:{{ .Tag }}'
+#       - 'v8platform/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}'
+#       - 'v8platform/{{.ProjectName}}:latest'
+#       - 'ghcr.io/v8platform/{{.ProjectName}}:{{ .Tag }}'
+#       - 'ghcr.io/v8platform/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}'
+#       - 'ghcr.io/v8platform/{{.ProjectName}}:latest'
+#     dockerfile: Dockerfile
+#     ids:
+#       - oneget
+#     build_flag_templates:
+#       - "--label=org.label-schema.schema-version=1.0"
+#       - "--label=org.label-schema.version={{.Version}}"
+#       - "--label=org.label-schema.name={{.ProjectName}}"
+#       - "--label=com.github.actions.name={{.ProjectName}}"
+#       - "--label=com.github.actions.description=Console app for download packages from releases.1c.ru"
+#       - "--label=com.github.actions.icon=terminal"
+#       - "--label=com.github.actions.color=blue"
+#       - "--label=repository=https://github.com/v8platform/oneget"
+#       - "--label=homepage=https://github.com/v8platform/oneget"
+#       - "--label=maintainer=Ruslan Zhdanov"
+#   - image_templates:
+#       - 'v8platform/{{.ProjectName}}-http:{{ .Tag }}'
+#       - 'v8platform/{{.ProjectName}}-http:v{{ .Major }}.{{ .Minor }}'
+#       - 'v8platform/{{.ProjectName}}-http:latest'
+#       - 'ghcr.io/v8platform/{{.ProjectName}}-http:{{ .Tag }}'
+#       - 'ghcr.io/v8platform/{{.ProjectName}}-http:v{{ .Major }}.{{ .Minor }}'
+#       - 'ghcr.io/v8platform/{{.ProjectName}}-http:latest'
+#     dockerfile: Dockerfile_s
+#     ids:
+#       - oneget
+#     build_flag_templates:
+#       - "--label=org.label-schema.schema-version=1.0"
+#       - "--label=org.label-schema.version={{.Version}}"
+#       - "--label=org.label-schema.name={{.ProjectName}}"
+#       - "--label=com.github.actions.name={{.ProjectName}}"
+#       - "--label=com.github.actions.description=Console app for download packages from releases.1c.ru"
+#       - "--label=com.github.actions.icon=terminal"
+#       - "--label=com.github.actions.color=blue"
+#       - "--label=repository=https://github.com/v8platform/oneget"
+#       - "--label=homepage=https://github.com/v8platform/oneget"
+#       - "--label=maintainer=Ruslan Zhdanov"
 archives:
   - name_template: >-
       {{- .ProjectName }}_
